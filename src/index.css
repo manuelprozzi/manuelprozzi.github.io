@@ -1,13 +1,111 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+/* base styles */
+* {
+  margin: 0px;
+  font-family: 'Roboto Mono', monospace;
+  color: #333;
+}
+.navbar {
+  padding: 20px;
+  display: flex;
+  align-items: center;  
+  max-width: 600px;
+  margin: 0 auto;
+  border-bottom: 1px solid #f2f2f2;
+}
+.navbar h1 {
+  color: #17d4a8;
+}
+.navbar a {
+  margin: 10px;
+  padding: 6px;
+  text-decoration: none;
+}
+.element {
+  width: 140px;
+  margin: 10px;
+}
+.navbar a:hover {
+  color: #17d4a8;
+}
+.content {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* language switcher */
+
+.switch {
+  position: relative;
+  right: 10px;
+  width: 60px;
+  height: 30px;
+  border-radius: 25px;
 }
+
+.switch input {
+  appearance: none;
+  width: 60px;
+  height: 30px;
+  border-radius: 25px;
+  background: #333;
+  outline: none;
+  color: #fff;
+}
+.switch input::before, 
+.switch input::after {
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bolder;
+}
+
+.switch input::before {
+  content: "En";
+  left: 7px;
+}
+
+.switch input::after {
+  content: "Es";
+  right: 8px;
+}
+
+.switch label {
+  z-index: 1;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  border-radius: 30px;
+}
+
+.switch input:checked+label {
+  left: 30px;
+  right: 0px;
+  background: #17d4a8;
+}
+
+.switch input:not(:checked) +label {
+  left: 0px;
+  right: 30px;
+  background: #17d4a8;
+}
+
+/* skill previews / list */
+.list {
+  padding: 10px 16px;
+  margin: 20px 0;
+  border-bottom: 1px solid #fafafa;
+}
+.list:hover {
+  box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+}
+.list h2 {
+  font-size: 20px;
+  color: #17d4a8;
+  margin-bottom: 8px;
+}
+
+
