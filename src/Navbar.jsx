@@ -1,32 +1,45 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Suspense , useState } from 'react';
+import { useState } from 'react';
 import i18next from 'i18next';
+import MenuButton from './MenuButton';
 
 const Navbar = () => {
 
-    const { t, i18n } = useTranslation();
+    /* Translation */
+    const { t } = useTranslation();
 
-    const [checked, setChecked] = useState(false); 
-  const handleChange = () => { 
-    
-    setChecked(!checked); 
+    const [checked, setChecked] = useState(false);
+    const handleChange = () => {
+        setChecked(!checked);
+        checked ? i18next.changeLanguage('en') : i18next.changeLanguage('es')
 
-checked ? i18next.changeLanguage('en') : i18next.changeLanguage('es')
-    
-  }; 
+    };
+
+    /* Menu */
+
+    const [clicked, setClicked] = useState(false);
+    const handleClick = () => {
+        console.log("clicked");
+        setClicked(!clicked);
+    }
 
 
     return (
         <nav className="navbar">
-            <span className='title'><Link to="/"><h1>{t('navbar_title')}</h1></Link></span>
-            <span className='element'><Link to="/">{t('navbar_home')}</Link></span>
-            <span className='element'><Link to="/contact">{t('navbar_contact')}</Link></span>
-            <span className='element'><Link to="/about">{t('navbar_about')}</Link></span>
-            <span className='element switch'>
-                <input type='checkbox' id='switcher' onChange={handleChange}/>
-                <label htmlFor="switcher"></label>
-            </span>
+            <div><NavLink to="/"><h1>{t('navbar_title')}</h1></NavLink ></div>
+            <ul className={`links ${clicked ? 'menuOpen' : ''}`}>
+                <li><NavLink to="/" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>{t('navbar_home')}</NavLink ></li>
+                <li><NavLink to="/contact" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>{t('navbar_contact')}</NavLink ></li>
+                <li><NavLink to="/about" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>{t('navbar_about')}</NavLink ></li>
+                <li className='switch'>
+                    <input type='checkbox' id='switcher' onChange={handleChange} />
+                    <label htmlFor="switcher"></label>
+                </li>
+            </ul>
+            <div className="menuButton">
+                <MenuButton clicked={clicked} handleClick={handleClick} />
+            </div>
         </nav >
 
     );
@@ -34,10 +47,4 @@ checked ? i18next.changeLanguage('en') : i18next.changeLanguage('es')
 
 
 
-export default function App() {
-    return (
-        <Suspense fallback="Loading...">
-            <Navbar />
-        </Suspense>
-    )
-}
+export default Navbar;

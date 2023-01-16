@@ -14,6 +14,15 @@
   margin: 0 auto;
   border-bottom: 1px solid #f2f2f2;
 }
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  }
+
 .navbar h1 {
   color: #17d4a8;
 }
@@ -21,19 +30,20 @@
   margin: 10px;
   padding: 6px;
   text-decoration: none;
+
 }
-.element {
-  width: 140px;
+
+.navbar a.active {
+  font-weight: bold;
+}
+
+.navbar li {
   margin: 10px;
 }
 .navbar a:hover {
   color: #17d4a8;
 }
-.content {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 20px;
-}
+
 
 /* language switcher */
 
@@ -93,6 +103,12 @@
   background: #17d4a8;
 }
 
+.content {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
 /* skill previews / list */
 .list {
   padding: 10px 16px;
@@ -108,4 +124,16 @@
   margin-bottom: 8px;
 }
 
+
+@media (min-width: 768px) {
+  .menuButton {
+    display: none
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none
+  }
+}
 

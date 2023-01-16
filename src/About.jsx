@@ -1,10 +1,8 @@
-import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Suspense } from 'react';
 
 const About = () => {
 
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
 
     return (
         <div className="home">
