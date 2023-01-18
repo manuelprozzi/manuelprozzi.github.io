@@ -31,17 +31,20 @@ const Navbar = () => {
             <div className="menuButton">
                 <MenuButton clicked={clicked} handleClick={handleClick} />
             </div>
-            <ul className={`links${clicked ? ' open' : ''}`}>
-                <li><NavLink to="/" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>{t('navbar_home')}</NavLink ></li>
-                <li><NavLink to="/contact" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>{t('navbar_contact')}</NavLink ></li>
-                <li><NavLink to="/about" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>{t('navbar_about')}</NavLink ></li>
-                <li className='switch'>
-                    <input type='checkbox' id='switcher' onChange={handleChange} />
-                    <label htmlFor="switcher"></label>
-                </li>
-            </ul>
-            
-            
+            <div className={`links${clicked ? ' open' : ''}`}>
+                <ul>
+                    <li><NavLink to="/" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>{t('navbar_home')}</NavLink ></li>
+                    <li><NavLink to="/contact" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>{t('navbar_contact')}</NavLink ></li>
+                    <li><NavLink to="/about" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>{t('navbar_about')}</NavLink ></li>
+                    <li className='switch'>
+                        <input type='checkbox' id='switcher' onChange={handleChange} />
+                        <label htmlFor="switcher"></label>
+                    </li>
+                </ul>
+            </div>
+
+
+
         </nav >
 
     );

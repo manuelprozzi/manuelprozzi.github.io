@@ -5,13 +5,14 @@
   margin: 0px;
   font-family: 'Roboto Mono', monospace;
   color: #333;
+/*   border: 1px solid grey; */
 }
 .navbar {
   padding: 20px;
   display: flex;
   align-items: center;  
   justify-content: space-between;
-  max-width: 600px;
+  max-width: 900px;
   margin: 0 auto;
   border-bottom: 1px solid #f2f2f2;
 }
@@ -22,6 +23,7 @@
   display: flex;
   justify-content: space-between;
   list-style-type: none;
+  align-items: center;  
   }
 
 .navbar h1 {
@@ -51,6 +53,7 @@
 .switch {
   position: relative;
   right: 10px;
+  left: 0px;
   width: 60px;
   height: 30px;
   border-radius: 25px;
@@ -105,7 +108,7 @@
 }
 
 .content {
-  max-width: 600px;
+  max-width: 700px;
   margin: 40px auto;
   padding: 20px;
 }
@@ -126,19 +129,25 @@
 }
 
 .menuButton {
-  display: none
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  display: none;
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 690px) {
   .menuButton {
     display: flex
   }
   .navbar {
-    flex-direction:  column;
+    text-align: center;
+    flex-direction: column;
     align-items: flex-start;
   }
-  .navbar ul {
+  .navbar .links {
+    flex-direction:  column;
+    align-items: flex-start;
     display: none;
     width: 100%
   }
@@ -146,13 +155,11 @@
   .navbar ul{
     width: 100%;
     flex-direction: column;
-  }
-  .navbar {
-    text-align: center;
+    
   }
 }
 
-.navbar ul.open {
+.navbar .links.open {
   display: flex;
 }
 
