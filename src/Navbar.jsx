@@ -20,15 +20,18 @@ const Navbar = () => {
 
     const [clicked, setClicked] = useState(false);
     const handleClick = () => {
-        console.log("clicked");
         setClicked(!clicked);
+        console.log(clicked);
     }
 
 
     return (
         <nav className="navbar">
             <div><NavLink to="/"><h1>{t('navbar_title')}</h1></NavLink ></div>
-            <ul className={`links ${clicked ? 'menuOpen' : ''}`}>
+            <div className="menuButton">
+                <MenuButton clicked={clicked} handleClick={handleClick} />
+            </div>
+            <ul className={`links${clicked ? ' open' : ''}`}>
                 <li><NavLink to="/" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>{t('navbar_home')}</NavLink ></li>
                 <li><NavLink to="/contact" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>{t('navbar_contact')}</NavLink ></li>
                 <li><NavLink to="/about" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>{t('navbar_about')}</NavLink ></li>
@@ -37,9 +40,8 @@ const Navbar = () => {
                     <label htmlFor="switcher"></label>
                 </li>
             </ul>
-            <div className="menuButton">
-                <MenuButton clicked={clicked} handleClick={handleClick} />
-            </div>
+            
+            
         </nav >
 
     );
