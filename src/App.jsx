@@ -7,18 +7,20 @@ import About from './About';
 import Contact from './Contact';
 
 function App() {
- 
+
 
   return (
     <Router>
-      <div className='App'>
+      <div className='font-mono'>
         <Navbar />
-        <div className='content'>
+        <div className='flex justify-center'> {/* Main content wrapper*/}
+          <div className='m-10 lg:max-w-4xl'>
           <Routes>
-            <Route path='/' element={<Home />} />
+            <Route path='/' element={<Home />}/>
             <Route path='/about' element={<About />} />
-            <Route path='/contact' element={<Contact />} />              
+            <Route path='/contact' element={<Contact />} />
           </Routes>
+          </div>
         </div>
       </div>
     </Router>

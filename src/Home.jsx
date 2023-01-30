@@ -5,9 +5,9 @@ const Home = () => {
     const { t } = useTranslation();
 
     return (
-        <div className="home">
-            <h1>{t('home_title')}</h1>
-            <p>{t('home_text')}</p>
+        <div>
+            <h1 className='text-2xl'>{t('home_title')}</h1>
+            <p className='text-lg'>{t('home_text')}</p>
         </div>
     );
 }

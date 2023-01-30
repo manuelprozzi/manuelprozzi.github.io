@@ -29,7 +29,7 @@ const Navbar = () => {
         <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-slate-500 mb-3">
             <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
                 <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-                    <NavLink to="/" className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"><h1>{t('navbar_title')}</h1></NavLink >
+                    <NavLink to="/" className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap text-white"><h1 className='text-xl'>{t('navbar_title')}</h1></NavLink >
                     <button
                         className="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
                         type="button"
@@ -46,17 +46,19 @@ const Navbar = () => {
                 >
                     <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
                         <li className="nav-item">
-                            <NavLink to="/" className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75">{t('navbar_home')}</NavLink >
+                            <NavLink to="/" className="px-3 py-2 flex items-center text-xs font-bold leading-snug text-white hover:opacity-75">{t('navbar_home')}</NavLink >
                         </li>
                         <li className="nav-item">
-                            <NavLink to="/contact" className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75">{t('navbar_contact')}</NavLink >
+                            <NavLink to="/contact" className="px-3 py-2 flex items-center text-xs font-bold leading-snug text-white hover:opacity-75">{t('navbar_contact')}</NavLink >
                         </li>
                         <li className="nav-item">
-                            <NavLink to="/about" className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75">{t('navbar_about')}</NavLink >
+                            <NavLink to="/about" className="px-3 py-2 flex items-center text-xs font-bold leading-snug text-white hover:opacity-75">{t('navbar_about')}</NavLink >
                         </li>
                         <li className="nav-item">
-                            <input type='checkbox' id='switcher' onChange={handleChange} />
-                            <label htmlFor="switcher"></label>
+                            <label class="relative inline-flex items-center cursor-pointer align-bottom">
+                                <input type="checkbox" value="" class="sr-only peer" id='switcher' onChange={handleChange}/>
+                                    <div class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600 "></div>
+                            </label>
                         </li>
                     </ul>
                 </div>
@@ -64,7 +66,5 @@ const Navbar = () => {
         </nav>
     );
 }
-
-
 
 export default Navbar;
