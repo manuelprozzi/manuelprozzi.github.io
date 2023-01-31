@@ -12,7 +12,7 @@ function App() {
 
   return (
     
-    <div className="min-h-screen bg-gray-400 dark:bg-slate-500">
+    <div className="min-h-screen bg-gray-400 dark:bg-slate-800 font-dm">
     <Router>        
       <Navbar />
       <MainContentWrapper className="bg-gray-50">
