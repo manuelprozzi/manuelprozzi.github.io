@@ -26,7 +26,7 @@ const Navbar = () => {
 
 
     return (
-        <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-teal-900 dark:bg-slate-900 mb-3 shadow-xl text-teal-400">
+        <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-teal-900 dark:bg-slate-900 mb-3 shadow-xl text-teal-300">
             <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
                 <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
                     <NavLink to="/" className="text-xl leading-relaxed inline-block mr-4 py-2 whitespace-nowrap"><h1 className='text-2xl'>{t('navbar_title')}</h1></NavLink >

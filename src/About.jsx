@@ -5,40 +5,36 @@ const About = () => {
     const { t } = useTranslation();
 
     return (
-        <div>
-            <div>
-                <h2 className='text-2xl'>{t('about_experience')}</h2>
-                <div className='m-5'>
-                    <h2 className='text-lg'>{t('about_experience_1_title')}</h2>
-                    <p className='text-base'>{t('about_experience_1_description')}</p>
+        <div className=''>
+            <img className='rounded-full float-left h-28 w-28 mx-4 my-3' src="profile.jpg" alt="" />
+            <p className='text-lg'>{t('home_text')}</p>
+            <div className='text-lg my-5'>
+                <h1>{t('about_experience')}</h1>
+                <p>
+                    {t('about_experience_1_title')} {t('about_experience_1_description')}
+                    </p>
+
+                <h1>{t('about_studies')}</h1>
+                <p>
+                    {t('about_studies_2_title')} {t('about_studies_2_description')}
+                </p>
+            </div>
+            <div className='bg-slate-800 text-white rounded-2xl'>
+                <div className='py-5 px-8'>
+                    <h2 className='text-2xl'>{t('contact_title')}</h2>
+                    <h2 className='text-lg'>{t('contanct_item_1')}</h2>
+                    <p><a href="https://github.com/manuelprozzi/">{t('contanct_item_1_adress')}</a></p>
+                    <h2 className='text-lg'>{t('contanct_item_2')}</h2>
+                    <a href="mailto:manuelprozzi@gmail.com">
+                        <p>{t('contanct_item_2_adress')}</p>
+                    </a>
                 </div>
             </div>
-            <div>
-                <h2 className='text-2xl'>{t('about_skills')}</h2>
-                <div className='m-5'>
-                    <h2 className='text-lg'>{t('about_skills_1_title')}</h2>
-                    <p className='text-base'>{t('about_skills_1_description')}</p>
-                </div>
-                <div className='m-5'>
-                    <h2 className='text-lg'>{t('about_skills_2_title')}</h2>
-                    <p className='text-base'>{t('about_skills_2_description')}</p>
-                </div>
-                <div className='m-5'>
-                    <h2 className='text-lg'>{t('about_skills_3_title')}</h2>
-                    <p className='text-base'>{t('about_skills_3_description')}</p>
-                </div>
-            </div>
-            <div>
-                <h2 className='text-2xl'>{t('about_studies')}</h2>
-                <div className='m-5'>
-                    <h2 className='text-lg'>{t('about_studies_1_title')}</h2>
-                    <p className='text-base'>{t('about_studies_1_description')}</p>
-                </div>
-                <div className='m-5'>
-                    <h2 className='text-lg'>{t('about_studies_2_title')}</h2>
-                    <p className='text-base'>{t('about_studies_2_description')}</p>
-                </div>
-            </div>
+
+
+
+
+
         </div>
     );
 }
