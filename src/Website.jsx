@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Website = (props) => {
     return (
-        <div className='bg-teal-500 rounded-2xl m-5'>
+        <div className='bg-teal-500 rounded-2xl'>
             <h2 className='text-lg text-white px-5 py-2'>{props.title}</h2>
             <div class="relative rounded-2xl bg-gradient-to-t from-teal-800 to-white">
                 <img className='h-48 rounded-2xl object-cover mix-blend-multiply' src="phsite.png" alt="website image" />

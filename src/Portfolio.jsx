@@ -5,7 +5,7 @@ const Portfolio = () => {
     const { t } = useTranslation();
 
     return (
-        <div className='flex flex-col md:grid md:grid-cols-2 xl:grid-cols-3 md:grid-flow-row'>
+        <div className='flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:grid-flow-row gap-5 mt-5'>
             <Website title='Ecomm' source='#1'/>
             <Website title='Reciple blog' source='#2'/>
             <Website title='Third site' source='#3'/>
