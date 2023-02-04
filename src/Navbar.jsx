@@ -49,13 +49,12 @@ const Navbar = () => {
                             <NavLink to="/" className="px-3 py-2 flex leading-snug hover:opacity-75">{t('navbar_home')}</NavLink >
                         </li>
                         <li>
-                            <NavLink to="/contact" className="px-3 py-2 flex leading-snug hover:opacity-75">{t('navbar_contact')}</NavLink >
+                            <NavLink to="/portfolio" className="px-3 py-2 flex leading-snug hover:opacity-75">Portfolio</NavLink >
                         </li>
                         <li>
-                            <NavLink to="/about" className="px-3 py-2 flex leading-snug hover:opacity-75">{t('navbar_about')}</NavLink >
                         </li>
                         <li>
-                            <label for="switch" className="text-slate-800 select-none my-1.5 mx-1.5 sm:mx-2.5 inline-flex rounded-md cursor-pointer dark:text-slate-800 bg-slate-600 rounded-3xl " onChange={handleChange} >
+                            <label for="switch" className="text-slate-800 select-none my-1.5 mx-1.5 sm:mx-2.5 inline-flex cursor-pointer dark:text-slate-800 bg-slate-600 rounded-3xl " onChange={handleChange} >
                                 <input id="switch" type="checkbox" className="hidden peer" />
                                 <span className="px-1 py-0.5 rounded-l-3xl bg-teal-500 peer-checked:bg-slate-600 dark:bg-teal-500 peer-checked:dark:bg-slate-600 rounded-3xl">En</span>
                                 <span className="px-1 py-0.5 rounded-r-3xl bg-slate-600 peer-checked:bg-teal-500 dark:bg-slate-600 peer-checked:dark:bg-teal-500 rounded-3xl">Es</span>
