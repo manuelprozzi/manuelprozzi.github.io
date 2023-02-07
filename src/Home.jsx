@@ -7,13 +7,9 @@ const Home = () => {
   const { t } = useTranslation();
 
   return (
-
-
-
     <div className="flex flex-col items-center">
-
       <div className="lg:max-w-6xl">
-        <div className="rounded-2xl bg-teal-500 p-5">
+        <div className="mr-5 ml-5 rounded-2xl bg-teal-400 p-5">
           <img
             className="float-left m-4 h-28 w-28 rounded-full"
             src="profile.jpg"
@@ -45,7 +41,9 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <Portfolio />
+        <div className="mr-5 ml-5 sm:hidden">
+          <Portfolio />
+        </div>
       </div>
     </div>
   );

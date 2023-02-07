@@ -11,7 +11,7 @@ function App() {
   const { t } = useTranslation();
 
   return (
-    <div className="bg-teal-600 font-dm dark:bg-slate-800">
+    <div className="min-h-screen bg-teal-500 font-dm dark:bg-slate-800">
       <Router>
         <Topbar />
         <Navbar />
