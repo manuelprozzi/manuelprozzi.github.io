@@ -1,12 +1,18 @@
 import { useTranslation } from "react-i18next";
+import { NavLink } from "react-router-dom";
+import Navbar from "./Navbar";
 import Portfolio from "./Portfolio";
 
 const Home = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="m-5 flex flex-col items-center">
-      <div className="border-2 border-red-500 lg:max-w-6xl">
+
+
+
+    <div className="flex flex-col items-center">
+
+      <div className="lg:max-w-6xl">
         <div className="rounded-2xl bg-teal-500 p-5">
           <img
             className="float-left m-4 h-28 w-28 rounded-full"

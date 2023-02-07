@@ -1,19 +1,20 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 // pages
-import Navbar from "./Navbar";
+import Topbar from "./Topbar";
 import Home from "./Home";
 import Portfolio from "./Portfolio";
 import { useTranslation } from "react-i18next";
+import Navbar from "./Navbar";
 
 function App() {
   const { t } = useTranslation();
 
   return (
-    <div className="h-auto min-h-screen bg-teal-600 font-dm dark:bg-slate-800">
+    <div className="bg-teal-600 font-dm dark:bg-slate-800">
       <Router>
+        <Topbar />
         <Navbar />
-        <h1 className="mx-10 text-2xl text-teal-300">{t("navbar_home")}</h1>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/portfolio" element={<Portfolio />} />
