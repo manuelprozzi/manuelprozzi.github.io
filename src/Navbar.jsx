@@ -1,33 +1,35 @@
 import { NavLink } from "react-router-dom";
-import { useTranslation } from "react-i18next";
-import { useState } from "react";
-import i18next from "i18next";
 
 const Navbar = () => {
   /* Translation */
-  const { t } = useTranslation();
+
+  const activeStyle = "rounded-full bg-slate-800 p-2 text-teal-300 dark:bg-teal-400 dark:text-slate-800";
+  const inactiveStyle = "rounded-full bg-teal-400 p-2 text-slate-800 dark:bg-teal-700 dark:text-slate-800";
 
   return (
-    <nav className="hidden w-full sm:block">
+    <nav className="block w-full sm:hidden">
       <ul className="m-auto mt-5 mb-5 flex w-full justify-between sm:max-w-3xl lg:max-w-6xl">
         <li className="ml-5 mr-5">
           <NavLink
             to="/"
-            className="rounded-full bg-slate-800 p-2 text-teal-300 dark:bg-teal-400 dark:text-slate-800"
-          >
-            {t("navbar_home")}
+            className={({ isActive }) =>
+              isActive ? activeStyle : inactiveStyle
+            }
+          > Home
           </NavLink>
-        </li>
-        <li className="ml-5 mr-5">
-          <NavLink
-            to="/portfolio"
-            className="rounded-full bg-slate-800 p-2 text-teal-300 dark:bg-teal-400 dark:text-slate-800"
-          >
-            Portfolio
-          </NavLink>
-        </li>
-      </ul>
-    </nav>
+      </li>
+      <li className="ml-5 mr-5">
+        <NavLink
+          to="/portfolio"
+          className={({ isActive }) =>
+          isActive ? activeStyle : inactiveStyle
+        }
+        >
+          Portfolio
+        </NavLink>
+      </li>
+    </ul>
+    </nav >
   );
 };
 

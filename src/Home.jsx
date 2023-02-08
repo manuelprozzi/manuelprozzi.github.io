@@ -1,6 +1,4 @@
 import { useTranslation } from "react-i18next";
-import { NavLink } from "react-router-dom";
-import Navbar from "./Navbar";
 import Portfolio from "./Portfolio";
 
 const Home = () => {
@@ -9,39 +7,36 @@ const Home = () => {
   return (
     <div className="flex flex-col items-center">
       <div className="lg:max-w-6xl">
-        <div className="mr-5 ml-5 rounded-2xl bg-teal-400 p-5">
+        <div className="mr-5 ml-5 mt-5 rounded-2xl bg-teal-400 p-5">
           <img
             className="float-left m-4 h-28 w-28 rounded-full"
             src="profile.jpg"
             alt=""
           />
-          <div className="p-5 text-lg">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
-            dolores sapiente aliquid blanditiis maiores esse vel praesentium
-            suscipit ab, quisquam repellat? Pariatur saepe beatae temporibus
-            quod inventore recusandae reprehenderit reiciendis. Lorem, ipsum
-            dolor sit amet consectetur adipisicing elit. Fuga ipsa dolor
-            corrupti. Quas, eum! Quasi, distinctio! Veritatis cumque aperiam
-            labore molestiae, alias consequuntur provident suscipit amet ipsam
-            quaerat, nesciunt ipsa.
-          </div>
+          <p className="p-4 text-md text-justify tracking-tight">
+            {t("home_text_1")}
+          </p>
+          <p className="px-4 pb-4 text-md text-justify tracking-tight sm:hidden">{t("home_text_2")}</p>
+          <p className="p-4 text-md hidden text-justify tracking-tight sm:block">
+          {t("home_text_3")}
+          </p>
           <div className="rounded-2xl bg-slate-800 text-white">
             <div className="py-5 px-8">
               <h2 className="text-2xl">{t("contact_title")}</h2>
-              <h2 className="text-lg">{t("contanct_item_1")}</h2>
+              <h2 className="text-lg">GitHub</h2>
               <p>
                 <a href="https://github.com/manuelprozzi/">
-                  {t("contanct_item_1_adress")}
+                https://github.com/manuelprozzi/
                 </a>
               </p>
-              <h2 className="text-lg">{t("contanct_item_2")}</h2>
+              <h2 className="text-lg">Email</h2>
               <a href="mailto:manuelprozzi@gmail.com">
-                <p>{t("contanct_item_2_adress")}</p>
+                <p>manuelprozzi@gmail.com</p>
               </a>
             </div>
           </div>
         </div>
-        <div className="mr-5 ml-5 sm:hidden">
+        <div className="hidden sm:block">
           <Portfolio />
         </div>
       </div>

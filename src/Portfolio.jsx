@@ -5,7 +5,7 @@ const Portfolio = () => {
 
   return (
     <div className="flex w-full justify-center">
-      <div className="mt-5 mb-5 flex flex-col gap-5 sm:grid sm:max-w-6xl sm:grid-flow-row sm:grid-cols-2 lg:grid-cols-3">
+      <div className="m-5 flex flex-col gap-5 sm:grid sm:max-w-6xl sm:grid-flow-row sm:grid-cols-2 lg:grid-cols-3">
         <Website
           title="Ecommerce"
           link="https://github.com/manuelprozzi/ecomm"
