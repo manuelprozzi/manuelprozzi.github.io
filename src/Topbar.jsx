@@ -16,7 +16,7 @@ const Topbar = () => {
   /* Menu */
 
   return (
-    <nav className="z-10 flex w-full justify-between bg-teal-700 px-5 py-3 text-teal-300 shadow-xl dark:bg-slate-900"> 
+    <nav className="z-10 flex w-full justify-between bg-teal-700 px-5 py-3 text-teal-300 shadow-xl dark:bg-slate-900">
       {/* Title */}
       <div className="flex items-center">
         <NavLink to="/" className="">

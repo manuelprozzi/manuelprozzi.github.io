@@ -3,8 +3,10 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   /* Translation */
 
-  const activeStyle = "rounded-full bg-slate-800 p-2 text-teal-300 dark:bg-teal-400 dark:text-slate-800";
-  const inactiveStyle = "rounded-full bg-teal-400 p-2 text-slate-800 dark:bg-teal-700 dark:text-slate-800";
+  const activeStyle =
+    "rounded-full bg-slate-800 p-2 text-teal-300 dark:bg-teal-400 dark:text-slate-800";
+  const inactiveStyle =
+    "rounded-full bg-teal-400 p-2 text-slate-800 dark:bg-teal-700 dark:text-slate-800";
 
   return (
     <nav className="block w-full sm:hidden">
@@ -15,21 +17,23 @@ const Navbar = () => {
             className={({ isActive }) =>
               isActive ? activeStyle : inactiveStyle
             }
-          > Home
+          >
+            {" "}
+            Home
           </NavLink>
-      </li>
-      <li className="ml-5 mr-5">
-        <NavLink
-          to="/portfolio"
-          className={({ isActive }) =>
-          isActive ? activeStyle : inactiveStyle
-        }
-        >
-          Portfolio
-        </NavLink>
-      </li>
-    </ul>
-    </nav >
+        </li>
+        <li className="ml-5 mr-5">
+          <NavLink
+            to="/portfolio"
+            className={({ isActive }) =>
+              isActive ? activeStyle : inactiveStyle
+            }
+          >
+            Portfolio
+          </NavLink>
+        </li>
+      </ul>
+    </nav>
   );
 };
 

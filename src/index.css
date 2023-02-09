@@ -3,3 +3,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background-color: #14b8a6;
+  font-family: "Courier New", Courier, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1e293b;
+  }
+}

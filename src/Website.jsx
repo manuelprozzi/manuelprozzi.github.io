@@ -3,7 +3,9 @@ import React from "react";
 export const Website = (props) => {
   return (
     <div className="rounded-2xl bg-teal-400">
-      <h2 className="px-5 py-2 text-lg text-white drop-shadow-xl">{props.title}</h2>
+      <h2 className="px-5 py-2 text-lg text-white drop-shadow-xl">
+        {props.title}
+      </h2>
       <a href={props.link}>
         <div class="relative rounded-2xl bg-gradient-to-t from-teal-800 to-white">
           <img

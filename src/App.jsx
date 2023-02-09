@@ -11,16 +11,14 @@ function App() {
   const { t } = useTranslation();
 
   return (
-    <div className="min-h-screen bg-teal-500 font-dm dark:bg-slate-800">
-      <Router>
-        <Topbar />
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-        </Routes>
-      </Router>
-    </div>
+    <Router>
+      <Topbar />
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+      </Routes>
+    </Router>
   );
 }
 
