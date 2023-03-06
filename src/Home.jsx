@@ -31,8 +31,8 @@ const Home = () => {
               <h2 className="text-2xl">{t("contact_title")}</h2>
               <h2 className="text-lg">GitHub</h2>
               <p>
-                <a href="https://github.com/manuelprozzi/">
-                  https://github.com/manuelprozzi/
+                <a className="text-sm sm:text-base" href="https://github.com/manuelprozzi/">
+                  github.com/manuelprozzi/
                 </a>
               </p>
               <h2 className="text-lg">Email</h2>
